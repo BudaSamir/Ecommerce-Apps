@@ -1,3 +1,5 @@
+import 'package:eco_x/utilities/router.dart';
+import 'package:eco_x/utilities/routes.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,11 +8,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Eco X',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Color.fromARGB(255, 236, 236, 236),
+        primaryColor: Colors.red,
+        inputDecorationTheme: InputDecorationTheme(
+          fillColor: Colors.white,
+          filled: true,
+          labelStyle: Theme.of(context).textTheme.titleMedium,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(2.0),
+            borderSide: const BorderSide(color: Colors.grey),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(2.0),
+            borderSide: const BorderSide(color: Colors.grey),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(2.0),
+            borderSide: const BorderSide(color: Colors.grey),
+          ),
+        ),
       ),
-      home: Container(),
+      onGenerateRoute: AppRouter.onGenerateRoutes,
+      initialRoute: AppRoutes.loginScreenRoute,
     );
   }
 }
