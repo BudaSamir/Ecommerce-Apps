@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Eco X',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 236, 236, 236),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 236, 236, 236),
         primaryColor: Colors.red,
         inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(2.0),
             borderSide: const BorderSide(color: Colors.grey),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(2.0),
+            borderSide: const BorderSide(color: Colors.red),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(2.0),
+            borderSide: const BorderSide(color: Colors.red),
           ),
         ),
       ),
