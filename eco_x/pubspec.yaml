@@ -17,6 +17,11 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   persistent_bottom_nav_bar_v2: ^4.2.8
+  firebase_core: ^2.10.0
+  firebase_auth: ^4.4.2
+  google_sign_in: ^6.1.0
+  flutter_facebook_auth: ^5.0.8
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:

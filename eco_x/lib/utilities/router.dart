@@ -7,8 +7,6 @@ import 'package:flutter/cupertino.dart';
 class AppRouter {
   static Route<dynamic> onGenerateRoutes(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case AppRoutes.landingScreenRoute:
-
       case AppRoutes.loginScreenRoute:
         return CupertinoPageRoute(
             builder: (_) => const AuthScreen(), settings: routeSettings);
@@ -16,7 +14,7 @@ class AppRouter {
       case AppRoutes.bottomNavBarRoute:
         return CupertinoPageRoute(
             builder: (_) => const BottomNavBar(), settings: routeSettings);
-
+      case AppRoutes.landingScreenRoute:
       default:
         return CupertinoPageRoute(
             builder: (_) => const LandingScreen(), settings: routeSettings);
